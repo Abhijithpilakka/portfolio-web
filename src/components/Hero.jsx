@@ -53,37 +53,37 @@ export default function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto w-full px-6 md:px-8 lg:px-16 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[60vh] md:min-h-[70vh] pb-32 md:pb-24">
           {/* Left Content */}
           <div className="flex flex-col justify-center">
-            <div className="mb-8">
+            <div className="mb-6 md:mb-8">
               <h1 className="font-bold leading-tight">
-                <span className="text-3xl md:text-4xl lg:text-5xl text-gray-300 block mb-3">Hey, I'm</span>
-                <span className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white block mb-2">Abhijith</span>
-                <div className="mb-6">
-                  <span className="text-orange-400 text-sm font-mono animate-pulse">
+                <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-300 block mb-2 md:mb-3">Hey, I'm</span>
+                <span className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-white block mb-3 md:mb-4">Abhijith</span>
+                <div>
+                  <span className="text-sm md:text-base lg:text-lg text-orange-400 font-mono animate-pulse">
                     Designer • Developer
                   </span>
                 </div>
               </h1>
             </div>
             
-            <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-xl leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 md:mb-12 max-w-xl leading-relaxed">
               Crafting digital experiences where <span className="text-orange-400 font-semibold">design meets functionality</span>. 
               From elegant interfaces to robust backend systems, I turn ideas into reality.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 md:gap-4">
               <button
                 onClick={() => scrollToSection('projects')}
-                className="px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-full font-semibold transition-all flex items-center gap-2 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-105"
+                className="px-6 py-3 md:px-8 md:py-4 bg-orange-500 hover:bg-orange-600 rounded-full font-semibold transition-all flex items-center gap-2 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-105 text-sm md:text-base"
               >
                 View My Work
-                <ArrowRight size={20} />
+                <ArrowRight size={18} className="md:w-5 md:h-5" />
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="px-8 py-4 border-2 border-orange-500/50 hover:border-orange-500 hover:bg-orange-500/10 rounded-full font-semibold transition-all hover:scale-105"
+                className="px-6 py-3 md:px-8 md:py-4 border-2 border-orange-500/50 hover:border-orange-500 hover:bg-orange-500/10 rounded-full font-semibold transition-all hover:scale-105 text-sm md:text-base"
               >
                 Let's Talk
               </button>
@@ -95,22 +95,22 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom Bar - Bigger and Full Width */}
-      <div className="absolute bottom-0 left-0 w-full backdrop-blur-md border-t border-orange-500/20">
-        <div className="w-full px-8 md:px-12 lg:px-16 py-10 md:py-12">
-          <div className="flex flex-wrap items-center justify-between gap-8 md:gap-12 text-base md:text-lg">
+      {/* Bottom Bar - Hidden on mobile, visible on tablet and up */}
+      <div className="hidden md:block absolute bottom-0 left-0 w-full backdrop-blur-md border-t border-orange-500/20">
+        <div className="w-full px-8 md:px-12 lg:px-16 py-8 md:py-10 lg:py-12">
+          <div className="flex flex-wrap items-center justify-between gap-6 md:gap-8 lg:gap-12 text-sm md:text-base lg:text-lg">
             <span className="text-gray-200 hover:text-orange-400 transition-colors cursor-default whitespace-nowrap">
               UI/UX Design
             </span>
-            <span className="text-orange-500/40 hidden md:inline">|</span>
+            <span className="text-orange-500/40">|</span>
             <span className="text-gray-200 hover:text-orange-400 transition-colors cursor-default whitespace-nowrap">
               Full-Stack Development
             </span>
-            <span className="text-orange-500/40 hidden md:inline">|</span>
+            <span className="text-orange-500/40">|</span>
             <span className="text-gray-200 hover:text-orange-400 transition-colors cursor-default whitespace-nowrap">
               System Architecture
             </span>
-            <span className="text-orange-500/40 hidden md:inline">|</span>
+            <span className="text-orange-500/40">|</span>
             <span className="text-gray-200 hover:text-orange-400 transition-colors cursor-default whitespace-nowrap">
               Creative Solutions
             </span>
