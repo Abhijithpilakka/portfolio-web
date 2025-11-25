@@ -29,7 +29,7 @@ export default function Navigation() {
         </div>
 
         <a
-          href="/resume.pdf"
+          href="/Abhijith_Resume.pdf"
           download
           className="px-6 py-2 bg-orange-500 hover:bg-orange-600 rounded-full text-sm font-semibold transition-all flex items-center gap-2"
         >
