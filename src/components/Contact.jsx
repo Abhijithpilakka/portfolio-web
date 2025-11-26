@@ -15,7 +15,7 @@ export default function Contact() {
 
         <div className="flex flex-wrap gap-6 justify-center">
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:abhijithpilakka@gmail.com"
             className="px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-full font-semibold transition-all flex items-center gap-2"
           >
             <Mail size={20} />
@@ -23,7 +23,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://linkedin.com/in/abhijithpilakka/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 border border-slate-700 hover:border-orange-500 rounded-full font-semibold transition-all flex items-center gap-2"
@@ -33,7 +33,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/abhijithpilakka/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 border border-slate-700 hover:border-orange-500 rounded-full font-semibold transition-all flex items-center gap-2"

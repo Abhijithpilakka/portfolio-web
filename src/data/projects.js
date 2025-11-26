@@ -1,14 +1,14 @@
 export const projectsData = [
   {
     id: 1,
-    title: 'Enterprise Microservices Platform',
-    category: 'Backend Development',
-    tech: ['Java', 'Spring Boot', 'Hibernate', 'SQL'],
-    shortDesc: 'Scalable microservices architecture for enterprise applications',
-    fullDesc: 'Developed a comprehensive microservices platform handling 10K+ requests/day. Implemented RESTful APIs, database optimization, and service orchestration. Reduced response time by 40% through caching strategies and query optimization.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
-    github: 'https://github.com/yourusername/project1',
-    demo: 'https://project1-demo.vercel.app',
+    title: 'Online Multiplayer Game',
+    category: 'Frontend Development',
+    tech: ['React', 'Firebase', 'JavaScript'],
+    shortDesc: 'Online multiplayer imposter game with real-time interactions. Players can create and join rooms to play together',
+    fullDesc: 'Developed a real-time online multiplayer imposter game using React for the frontend and Firebase for backend services. Implemented features like room creation, player interactions, and game state management to provide an engaging user experience.',
+    image: '/imposter.png',
+    github: 'https://github.com/abhijithpilakka/imposter-game',
+    demo: 'https://theimpostergame.vercel.app',
     number: '01'
   },
   {

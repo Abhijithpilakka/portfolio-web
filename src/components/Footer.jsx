@@ -12,7 +12,7 @@ export default function Footer() {
           <span className="text-orange-500">/&gt;</span>
         </div>
         <div className="text-slate-400 text-sm">
-          Designed & Built with React • © 2024
+          Designed & Built with React • © 2025
         </div>
       </div>
     </footer>
