@@ -15,169 +15,126 @@ export default function Hero() {
         minHeight: '100vh',
       }}
     >
-      {/* Animated Gradient Background */}
+      {/* 🔥 DARK Premium Animated Gradient + Noise */}
       <div 
-        className="absolute inset-0 animate-gradient"
+        className="absolute inset-0 animate-gradient-slow"
         style={{
-          background: 'linear-gradient(135deg, #1a0a00, #2d1200, #4a1f00, #2d1200, #1a0a00)',
-          backgroundSize: '400% 400%',
+          background: `
+            radial-gradient(circle at 20% 30%, rgba(255, 80, 40, 0.25), transparent 60%),
+            radial-gradient(circle at 70% 70%, rgba(180, 40, 10, 0.25), transparent 70%),
+            linear-gradient(135deg, #0d0603, #1b0a04, #2b0f06, #1b0a04, #0d0603)
+          `,
+          backgroundSize: "300% 300%",
+          position: "absolute",
         }}
       />
 
-      {/* Animated floating orbs */}
+      {/* Noise texture overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.08]"
+        style={{
+          backgroundImage:
+            "url('https://assets.codepen.io/2361/noise.png')",
+          backgroundSize: "300px",
+          mixBlendMode: "overlay",
+        }}
+      />
+
+      {/* Soft floating orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
-          className="absolute w-96 h-96 rounded-full opacity-20 animate-float-slow"
+          className="absolute w-80 h-80 rounded-full opacity-[0.15] animate-float-slow"
           style={{
-            background: 'radial-gradient(circle, rgba(255, 87, 34, 0.4) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255,70,30,0.25), transparent 70%)',
             top: '20%',
             left: '10%',
           }}
         />
         <div 
-          className="absolute w-80 h-80 rounded-full opacity-20 animate-float-medium"
+          className="absolute w-72 h-72 rounded-full opacity-[0.12] animate-float-medium"
           style={{
-            background: 'radial-gradient(circle, rgba(230, 74, 25, 0.3) 0%, transparent 70%)',
-            bottom: '30%',
+            background: 'radial-gradient(circle, rgba(200,50,20,0.2), transparent 70%)',
+            bottom: '25%',
             right: '15%',
-          }}
-        />
-        <div 
-          className="absolute w-64 h-64 rounded-full opacity-20 animate-float-fast"
-          style={{
-            background: 'radial-gradient(circle, rgba(255, 138, 101, 0.3) 0%, transparent 70%)',
-            top: '60%',
-            left: '60%',
           }}
         />
       </div>
 
+      {/* Content */}
       <div className="max-w-7xl mx-auto w-full px-6 md:px-8 lg:px-16 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[60vh] md:min-h-[70vh] pb-32 md:pb-24">
-          {/* Left Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[60vh] pb-32">
+
           <div className="flex flex-col justify-center">
-            <div className="mb-6 md:mb-8">
+            <div className="mb-6">
               <h1 className="font-bold leading-tight">
-                <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-300 block mb-2 md:mb-3">Hey, I'm</span>
-                <span className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-white block mb-3 md:mb-4">Abhijith</span>
+                <span className="text-2xl text-gray-300 block mb-2">Hey, I'm</span>
+
+                <span className="text-6xl md:text-7xl lg:text-8xl text-white block">
+                  Abhijith
+                </span>
+
                 <div>
-                  <span className="text-sm md:text-base lg:text-lg text-orange-400 font-mono animate-pulse">
+                  <span className="text-base text-orange-400 font-mono animate-pulse">
                     Designer • Developer
                   </span>
                 </div>
               </h1>
             </div>
             
-            <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 md:mb-12 max-w-xl leading-relaxed">
+            <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
               Crafting digital experiences where <span className="text-orange-400 font-semibold">design meets functionality</span>. 
               From elegant interfaces to robust backend systems, I turn ideas into reality.
             </p>
 
-            <div className="flex flex-wrap gap-3 md:gap-4">
+            <div className="flex flex-wrap gap-4">
               <button
                 onClick={() => scrollToSection('projects')}
-                className="px-6 py-3 md:px-8 md:py-4 bg-orange-500 hover:bg-orange-600 rounded-full font-semibold transition-all flex items-center gap-2 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-105 text-sm md:text-base"
+                className="px-8 py-4 bg-orange-600 hover:bg-orange-700 rounded-full font-semibold transition-all flex items-center gap-2 shadow-lg shadow-orange-600/20 hover:shadow-orange-600/40 hover:scale-105"
               >
                 View My Work
-                <ArrowRight size={18} className="md:w-5 md:h-5" />
+                <ArrowRight size={20} />
               </button>
+
               <button
                 onClick={() => scrollToSection('contact')}
-                className="px-6 py-3 md:px-8 md:py-4 border-2 border-orange-500/50 hover:border-orange-500 hover:bg-orange-500/10 rounded-full font-semibold transition-all hover:scale-105 text-sm md:text-base"
+                className="px-8 py-4 border-2 border-orange-500/40 hover:border-orange-500 hover:bg-orange-500/10 rounded-full font-semibold transition-all hover:scale-105"
               >
                 Let's Talk
               </button>
             </div>
           </div>
 
-          {/* Right Side - Empty space for balance */}
           <div className="hidden lg:block"></div>
         </div>
       </div>
 
-      {/* Bottom Bar - Hidden on mobile, visible on tablet and up */}
-      <div className="hidden md:block absolute bottom-0 left-0 w-full backdrop-blur-md border-t border-orange-500/20">
-        <div className="w-full px-8 md:px-12 lg:px-16 py-8 md:py-10 lg:py-12">
-          <div className="flex flex-wrap items-center justify-between gap-6 md:gap-8 lg:gap-12 text-sm md:text-base lg:text-lg">
-            <span className="text-gray-200 hover:text-orange-400 transition-colors cursor-default whitespace-nowrap">
-              UI/UX Design
-            </span>
-            <span className="text-orange-500/40">|</span>
-            <span className="text-gray-200 hover:text-orange-400 transition-colors cursor-default whitespace-nowrap">
-              Full-Stack Development
-            </span>
-            <span className="text-orange-500/40">|</span>
-            <span className="text-gray-200 hover:text-orange-400 transition-colors cursor-default whitespace-nowrap">
-              System Architecture
-            </span>
-            <span className="text-orange-500/40">|</span>
-            <span className="text-gray-200 hover:text-orange-400 transition-colors cursor-default whitespace-nowrap">
-              Creative Solutions
-            </span>
-          </div>
-        </div>
-      </div>
-
       <style jsx>{`
-        @keyframes gradient-shift {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
+        @keyframes gradientShiftSlow {
+          0% { background-position: 0% 0%; }
+          50% { background-position: 100% 100%; }
+          100% { background-position: 0% 0%; }
         }
 
-        @keyframes float-slow {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -30px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
+        .animate-gradient-slow {
+          animation: gradientShiftSlow 26s ease infinite;
         }
 
-        @keyframes float-medium {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(-40px, 30px) scale(1.15);
-          }
-          66% {
-            transform: translate(25px, -25px) scale(0.95);
-          }
+        @keyframes floatSlow {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          50% { transform: translate(20px, -25px) scale(1.07); }
         }
 
-        @keyframes float-fast {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          50% {
-            transform: translate(20px, 30px) scale(1.2);
-          }
-        }
-
-        .animate-gradient {
-          animation: gradient-shift 15s ease infinite;
+        @keyframes floatMedium {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          50% { transform: translate(-25px, 20px) scale(1.1); }
         }
 
         .animate-float-slow {
-          animation: float-slow 20s ease-in-out infinite;
+          animation: floatSlow 18s ease-in-out infinite;
         }
 
         .animate-float-medium {
-          animation: float-medium 15s ease-in-out infinite;
-        }
-
-        .animate-float-fast {
-          animation: float-fast 10s ease-in-out infinite;
+          animation: floatMedium 14s ease-in-out infinite;
         }
       `}</style>
     </section>
