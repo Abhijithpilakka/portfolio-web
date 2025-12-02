@@ -13,14 +13,14 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: 'ML-Powered Analytics Dashboard',
+    title: 'Automated Object Orientation System',
     category: 'Machine Learning',
-    tech: ['Python', 'FastAPI', 'Scikit-learn'],
-    shortDesc: 'Real-time analytics with predictive modeling capabilities',
-    fullDesc: 'Built an analytics dashboard with machine learning models for predictive insights. Integrated FastAPI backend with ML pipelines, achieving 92% accuracy in forecasting.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    github: 'https://github.com/yourusername/project2',
-    demo: 'https://project2-demo.vercel.app',
+    tech: ['Python', 'Arduino', 'Tensorflow'],
+    shortDesc: 'Real-time object orientation using comuter vision and arduino-controlled servo mechanism',
+    fullDesc: 'Built an automated system that detects and orients objects in real-time using computer vision techniques. Utilized TensorFlow for object detection and an Arduino-controlled servo mechanism to physically adjust the orientation of detected objects.',
+    image: '/pro2.png',
+    github: 'https://github.com/Abhijithpilakka/Automated-Object-orientation-system',
+    demo: null,
     number: '02'
   },
   {
