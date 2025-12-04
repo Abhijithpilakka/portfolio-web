@@ -25,13 +25,13 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: 'Legacy System Integration',
-    category: 'Integration',
-    tech: ['SOAP Services', 'Java', 'XML'],
-    shortDesc: 'Seamless integration of legacy systems with modern architecture',
-    fullDesc: 'Led the integration of legacy SOAP-based services with modern REST APIs. Designed adapters and middleware for seamless communication.',
+    title: 'TiffinSync',
+    category: 'FullStack Development',
+    tech: ['FAST API', 'React JS', 'PostgreSQL', 'Python'],
+    shortDesc: 'Fullstack application connecting tiffin providers with customers for easy ordering and delivery.',
+    fullDesc: 'Developed a fullstack application using FastAPI for the backend and React JS for the frontend. The platform connects tiffin providers with customers, allowing for seamless ordering and delivery of meals. Implemented PostgreSQL for database management and ensured secure user authentication and payment processing.',
     image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=400&fit=crop',
-    github: 'https://github.com/yourusername/project3',
+    github: 'https://github.com/Abhijithpilakka/tiffinsync/',
     demo: null,
     number: '03'
   }
